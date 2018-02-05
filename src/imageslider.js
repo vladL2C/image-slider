@@ -20,6 +20,8 @@ function moveRight() {
   resetImages();
   currentImage++;
   images[currentImage].style.display = "block";
+
+  //
   setTimeout(() => images[currentImage].classList.add('animate'));
   if (currentImage === 0) {
     images[currentImage].classList.remove('animate');
@@ -57,8 +59,10 @@ leftArrow.addEventListener('click', function() {
   moveLeft();
 });
 
-let interval = setInterval(function() {
-  rightArrow.click();
-},3000);
 
-interval;
+let interval = setInterval(() => {
+  rightArrow.click();
+},5000);
+
+
+
